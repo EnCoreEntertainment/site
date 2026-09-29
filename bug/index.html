@@ -106,13 +106,18 @@ input:focus,textarea:focus{outline:2px solid var(--cy);outline-offset:2px;border
     var last=0;try{last=parseInt(localStorage.getItem("encore_bug_ts")||"0",10);}catch(_){}
     if(Date.now()-last<60000){show("err","You just sent a report. Please wait a minute before sending another.");return;}
     btn.disabled=true;hint.textContent="Sending…";
-    var payload={name:n,email:e,message:d,page:location.href,_subject:"EnCore bug report from "+n,_honey:"",_captcha:"false",_template:"table"};
-    var ctrl=new AbortController(),to=setTimeout(function(){ctrl.abort();},15000);
-    fetch("https://formsubmit.co/ajax/"+TO,{
-      method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},
+  // Primary delivery: owner's Google Apps Script web app (reliable, server-side throttle).
+  // Endpoint + secret assembled at runtime (basic harvesting protection).
+  var GAS_EP=["https://script.google.com/macros/s/","AKfycbwJ5Xo3Pto2Z_aAuX37fxFQ3OgtwBU8T8SsQbtFWant_LDyZVz69DG6d9M-bu29Tl0o","/exec"].join("");
+  var GAS_SECRET=["AYFy","L7I93PNGTqKPhzevIuRk"].join("");
+    var payload={secret:GAS_SECRET,name:n,email:e,message:d,page:location.href};
+    var ctrl=new AbortController(),to=setTimeout(function(){ctrl.abort();},20000);
+    fetch(GAS_EP,{
+      method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},
       body:JSON.stringify(payload),signal:ctrl.signal
     }).then(function(r){clearTimeout(to);if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
-    .then(function(){
+    .then(function(res){
+      if(!res||res.ok!==true)throw new Error((res&&res.error)||"rejected");
       try{localStorage.setItem("encore_bug_ts",String(Date.now()));}catch(_){}
       show("ok","Thank you, "+n+"! Your bug report was sent. We will reply to "+e+" if we need details.");
       form.reset();t0=Date.now();
