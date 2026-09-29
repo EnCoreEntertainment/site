@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
 <head>
 <meta charset="utf-8">
@@ -166,35 +166,42 @@ footer{border-top:1px solid var(--line);padding:1.6rem 0 2.4rem;color:var(--mut2
   background:linear-gradient(135deg,var(--lm),var(--cy));color:#04120a;font-weight:900;text-decoration:none;border-radius:999px;padding:.9rem 1.15rem;box-shadow:0 16px 40px -12px rgba(163,230,53,.6);min-height:52px}
 .fab.show{display:inline-flex}
 @media(min-width:900px){.fab{right:22px;bottom:22px}}
+/* ===== LANG SWITCHER ===== */
+.lang{display:inline-flex;gap:.25rem;border:1px solid var(--line);border-radius:999px;padding:.2rem;background:rgba(255,255,255,.04)}
+.lang button{border:0;background:transparent;color:var(--mut);font-weight:800;font-size:.78rem;letter-spacing:.06em;border-radius:999px;padding:.4rem .7rem;cursor:pointer;min-height:36px}
+.lang button.on{background:linear-gradient(135deg,var(--cy),var(--vi));color:#020617}
+.mmenu .lang{margin-top:.7rem}
 </style>
 </head>
 <body>
-<a class="skip" href="#projects">Перейти к проектам</a>
+<a class="skip" href="#projects" data-i18n="nav.skip">Перейти к проектам</a>
 
 <header id="top">
   <div class="wrap">
-    <nav class="nav" aria-label="Основная навигация">
+    <nav class="nav" aria-label="Основная навигация" data-i18n-aria="nav.main">
       <a class="brand" href="#top" aria-label="EnCore — на главную">
         <span class="brand-mark" aria-hidden="true">E</span>
         <span>EnCore<small>PLUGIN • SHIFTEX • TAVERNKEEP</small></span>
       </a>
       <div class="links" id="deskLinks">
-        <a href="#projects">Проекты</a>
-        <a href="#why">Почему мы</a>
-        <a href="#how">Как устроено</a>
+        <a href="#projects" data-i18n="nav.projects">Проекты</a>
+        <a href="#why" data-i18n="nav.why">Почему мы</a>
+        <a href="#how" data-i18n="nav.how">Как устроено</a>
         <a href="#faq">FAQ</a>
-        <a class="btn btn-p btn-sm" href="#donate">❤ Поддержать</a>
+        <a class="btn btn-p btn-sm" href="#donate" data-i18n="nav.donate">❤ Поддержать</a>
+        <span class="lang" role="group" aria-label="Language"><button type="button" data-lang="ru" class="on">RU</button><button type="button" data-lang="en">EN</button></span>
       </div>
-      <button class="burger" id="burger" aria-expanded="false" aria-controls="mmenu" aria-label="Открыть меню">
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="mmenu" aria-label="Открыть меню" data-i18n-aria="nav.menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </nav>
     <div class="mmenu" id="mmenu">
-      <a href="#projects">Проекты</a>
-      <a href="#why">Почему мы</a>
-      <a href="#how">Как устроено</a>
+      <a href="#projects" data-i18n="nav.projects">Проекты</a>
+      <a href="#why" data-i18n="nav.why">Почему мы</a>
+      <a href="#how" data-i18n="nav.how">Как устроено</a>
       <a href="#faq">FAQ</a>
-      <a class="btn btn-p" href="#donate">❤ Поддержать проект</a>
+      <a class="btn btn-p" href="#donate" data-i18n="nav.donateM">❤ Поддержать проект</a>
+      <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="ru" class="on">RU</button><button type="button" data-lang="en">EN</button></div>
     </div>
   </div>
 </header>
@@ -204,26 +211,26 @@ footer{border-top:1px solid var(--line);padding:1.6rem 0 2.4rem;color:var(--mut2
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow"><i></i>EnCore • работаем в открытую</span>
-      <h1>EnCore: <span class="grad">плагин, Shiftex и таверна</span></h1>
-      <p class="lead">Три продукта студии: <b style="color:var(--txt)">Auto Proxy Per Site</b> — умное Chrome-расширение с автоподбором прокси, <b style="color:var(--txt)">Shiftex</b> — учёт смен для команд, и <b style="color:var(--txt)">Tavernkeep</b> — симулятор хозяина таверны с ростом до градостроительства.</p>
+      <span class="eyebrow" data-i18n="hero.eyebrow" data-i18n-html><i></i>EnCore • работаем в открытую</span>
+      <h1 data-i18n="hero.h1" data-i18n-html>EnCore: <span class="grad">плагин, Shiftex и таверна</span></h1>
+      <p class="lead" data-i18n="hero.lead" data-i18n-html>Три продукта студии: <b style="color:var(--txt)">Auto Proxy Per Site</b> — умное Chrome-расширение с автоподбором прокси, <b style="color:var(--txt)">Shiftex</b> — учёт смен для команд, и <b style="color:var(--txt)">Tavernkeep</b> — симулятор хозяина таверны с ростом до градостроительства.</p>
       <div class="cta">
-        <a class="btn btn-p" href="#projects">🚀 Смотреть проекты</a>
-        <a class="btn btn-g" href="#donate">❤ Поддержать донатом</a>
+        <a class="btn btn-p" href="#projects" data-i18n="hero.cta1">🚀 Смотреть проекты</a>
+        <a class="btn btn-g" href="#donate" data-i18n="hero.cta2">❤ Поддержать донатом</a>
       </div>
-      <ul class="trust" aria-label="Преимущества">
-        <li>🧩 Плагин v1.0 в релизе</li>
-        <li>📱 Shiftex в разработке</li>
-        <li>🍺 Tavernkeep в концепте</li>
-        <li>🔒 Privacy-first</li>
+      <ul class="trust" aria-label="Преимущества" data-i18n-aria="hero.trustAria">
+        <li data-i18n="hero.t1">🧩 Плагин v1.0 в релизе</li>
+        <li data-i18n="hero.t2">📱 Shiftex в разработке</li>
+        <li data-i18n="hero.t3">🍺 Tavernkeep в концепте</li>
+        <li data-i18n="hero.t4">🔒 Privacy-first</li>
       </ul>
-      <div class="stats" role="list" aria-label="Цифры студии">
-        <div class="stat" role="listitem"><b class="grad">3</b><span>проекта</span></div>
-        <div class="stat" role="listitem"><b class="grad">v1.0</b><span>плагин в проде</span></div>
-        <div class="stat" role="listitem"><b class="grad">2</b><span>в разработке</span></div>
+      <div class="stats" role="list" aria-label="Цифры студии" data-i18n-aria="hero.statsAria">
+        <div class="stat" role="listitem"><b class="grad">3</b><span data-i18n="hero.s1">проекта</span></div>
+        <div class="stat" role="listitem"><b class="grad">v1.0</b><span data-i18n="hero.s2">плагин в проде</span></div>
+        <div class="stat" role="listitem"><b class="grad">2</b><span data-i18n="hero.s3">в разработке</span></div>
       </div>
     </div>
-    <div class="term rv" aria-label="Демонстрация работы расширения">
+    <div class="term rv" aria-label="Демонстрация работы расширения" data-i18n-aria="hero.termAria">
       <div class="term-bar"><span class="dot" style="background:#f87171"></span><span class="dot" style="background:#fbbf24"></span><span class="dot" style="background:#34d399"></span><span class="small mut mono" style="margin-left:.4rem">encore • pool monitor</span><span class="live" style="margin-left:auto">LIVE</span></div>
       <div class="term-body">
         <div class="line"><span>▸ pool refresh · 42 proxies</span><span class="ok">OK 280ms</span></div>
@@ -231,65 +238,65 @@ footer{border-top:1px solid var(--line);padding:1.6rem 0 2.4rem;color:var(--mut2
         <div class="line"><span>▸ active → 91.205.x.x:8080</span><span class="ok">● verified</span></div>
         <div class="line"><span>▸ failover guard · hysteresis 3</span><span class="warn">armed</span></div>
         <div class="pingbar" aria-hidden="true"><i></i></div>
-        <p class="small mut" style="margin:.7rem 0 0">PAC per-site • auth • early-exit тесты • метрики пула. Всё локально, в вашем браузере.</p>
+        <p class="small mut" style="margin:.7rem 0 0" data-i18n="hero.termcap">PAC per-site • auth • early-exit тесты • метрики пула. Всё локально, в вашем браузере.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="strip" aria-hidden="true"><div>ENCORE&ensp;•&ensp;CHROME MV3&ensp;•&ensp;PAC PER-SITE&ensp;•&ensp;SHIFTEX&ensp;•&ensp;УЧЁТ СМЕН&ensp;•&ensp;TAVERNKEEP&ensp;•&ensp;TAVERN SIM&ensp;•&ensp;CITY-BUILDER&ensp;•&ensp;DARK FANTASY&ensp;•&ensp;ENCORE&ensp;•&ensp;CHROME MV3&ensp;•&ensp;PAC PER-SITE&ensp;•&ensp;SHIFTEX&ensp;•&ensp;УЧЁТ СМЕН&ensp;•&ensp;TAVERNKEEP&ensp;•&ensp;TAVERN SIM&ensp;•&ensp;CITY-BUILDER&ensp;•&ensp;DARK FANTASY&ensp;•&ensp;</div></div>
+<div class="strip" aria-hidden="true"><div data-i18n="strip" data-i18n-html>ENCORE&ensp;•&ensp;CHROME MV3&ensp;•&ensp;PAC PER-SITE&ensp;•&ensp;SHIFTEX&ensp;•&ensp;УЧЁТ СМЕН&ensp;•&ensp;TAVERNKEEP&ensp;•&ensp;TAVERN SIM&ensp;•&ensp;CITY-BUILDER&ensp;•&ensp;DARK FANTASY&ensp;•&ensp;ENCORE&ensp;•&ensp;CHROME MV3&ensp;•&ensp;PAC PER-SITE&ensp;•&ensp;SHIFTEX&ensp;•&ensp;УЧЁТ СМЕН&ensp;•&ensp;TAVERNKEEP&ensp;•&ensp;TAVERN SIM&ensp;•&ensp;CITY-BUILDER&ensp;•&ensp;DARK FANTASY&ensp;•&ensp;</div></div>
 
 <!-- PROJECTS -->
 <section id="projects">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow"><i></i>Проекты EnCore</span>
-      <h2 style="margin-top:.8rem">Один релиз в проде, <span class="grad">два — в работе</span></h2>
-      <p>Честно показываем статус каждого продукта: что готово, что в разработке и куда идут донаты.</p>
+      <span class="eyebrow" data-i18n="proj.eyebrow" data-i18n-html><i></i>Проекты EnCore</span>
+      <h2 style="margin-top:.8rem" data-i18n="proj.h2" data-i18n-html>Один релиз в проде, <span class="grad">два — в работе</span></h2>
+      <p data-i18n="proj.sub">Честно показываем статус каждого продукта: что готово, что в разработке и куда идут донаты.</p>
     </div>
     <div class="grid cols3">
       <article class="card rv">
         <div class="icon" aria-hidden="true">🧭</div>
-        <div class="tagrow"><span class="tag hot">● RELEASED v1.0</span><span class="tag">Chrome MV3</span><span class="tag">Флагман</span></div>
+        <div class="tagrow"><span class="tag hot">● RELEASED v1.0</span><span class="tag">Chrome MV3</span><span class="tag" data-i18n="proj.flag">Флагман</span></div>
         <h3>Auto Proxy Per Site</h3>
-        <p>Наш браузерный плагин: автоподбор лучшего прокси под каждый сайт — сбор пула, двухфазные тесты с early-exit, EWMA-рейтинг, мгновенный failover, PAC per-site, авторизация и метрики. Всё считается локально.</p>
-        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Умный пул: rank + история + blacklist</span></div>
-        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>PAC-изоляция: прокси только там, где нужно</span></div>
-        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Приватность: без внешних серверов</span></div>
+        <p data-i18n="proj.p1d">Наш браузерный плагин: автоподбор лучшего прокси под каждый сайт — сбор пула, двухфазные тесты с early-exit, EWMA-рейтинг, мгновенный failover, PAC per-site, авторизация и метрики. Всё считается локально.</p>
+        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="proj.p1f1">Умный пул: rank + история + blacklist</span></div>
+        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="proj.p1f2">PAC-изоляция: прокси только там, где нужно</span></div>
+        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="proj.p1f3">Приватность: без внешних серверов</span></div>
         <div class="tagrow"><span class="tag">proxy</span><span class="tag">pac</span><span class="tag">offscreen</span><span class="tag">alarms</span></div>
         <div class="card-foot">
-          <a class="btn btn-p btn-sm" href="#donate">Поддержать ❤</a>
-          <a class="btn btn-g btn-sm" href="#" onclick="return false" aria-label="GitHub скоро">GitHub · soon</a>
+          <a class="btn btn-p btn-sm" href="#donate" data-i18n="proj.sup1">Поддержать ❤</a>
+          <a class="btn btn-g btn-sm" href="#" onclick="return false" aria-label="GitHub скоро" data-i18n="proj.ghsoon">GitHub · soon</a>
         </div>
       </article>
       <article class="card rv">
         <div class="icon" aria-hidden="true">📋</div>
         <div class="tagrow"><span class="tag soon">◐ IN DEVELOPMENT</span><span class="tag">iOS + Android</span></div>
         <h3>Shiftex</h3>
-        <p>Мобильное приложение для управления сменами и их учёта: расписание, табель, часы и ставки, замены и уведомления. Для малого бизнеса, кафе, складов и охраны — без сложных ERP.</p>
-        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Смены, табель и зарплата в одном месте</span></div>
-        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Роли: админ, менеджер, сотрудник</span></div>
-        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Offline-first и push о заменах</span></div>
+        <p data-i18n="proj.p2d">Мобильное приложение для управления сменами и их учёта: расписание, табель, часы и ставки, замены и уведомления. Для малого бизнеса, кафе, складов и охраны — без сложных ERP.</p>
+        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="proj.p2f1">Смены, табель и зарплата в одном месте</span></div>
+        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="proj.p2f2">Роли: админ, менеджер, сотрудник</span></div>
+        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="proj.p2f3">Offline-first и push о заменах</span></div>
         <div class="tagrow"><span class="tag">shiftex</span><span class="tag">schedule</span><span class="tag">payroll</span></div>
         <div class="card-foot">
-          <a class="btn btn-g btn-sm" href="#donate">Ускорить релиз ❤</a>
+          <a class="btn btn-g btn-sm" href="#donate" data-i18n="proj.sup2">Ускорить релиз ❤</a>
         </div>
       </article>
       <article class="card rv">
         <div class="icon" aria-hidden="true">🍺</div>
         <div class="tagrow"><span class="tag soon">○ CONCEPT</span><span class="tag">PC + Mobile</span></div>
         <h3>Tavernkeep</h3>
-        <p>Симулятор хозяина таверны в мире мрачного фэнтези: вари эль, принимай охотников на чудовищ, расширяй зал — и вырасти от одной корчмы до целого города с экономикой и управлением.</p>
-        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Таверна → квартал → город: градостроительство</span></div>
-        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Экономика, репутация и случайные события</span></div>
-        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Оригинальный мир в духе тёмного фэнтези*</span></div>
+        <p data-i18n="proj.p3d">Симулятор хозяина таверны в мире мрачного фэнтези: вари эль, принимай охотников на чудовищ, расширяй зал — и вырасти от одной корчмы до целого города с экономикой и управлением.</p>
+        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="proj.p3f1">Таверна → квартал → город: градостроительство</span></div>
+        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="proj.p3f2">Экономика, репутация и случайные события</span></div>
+        <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="proj.p3f3">Оригинальный мир в духе тёмного фэнтези*</span></div>
         <div class="tagrow"><span class="tag">tavern-sim</span><span class="tag">city-builder</span><span class="tag">management</span></div>
         <div class="card-foot">
-          <a class="btn btn-g btn-sm" href="#donate">В титры ❤</a>
+          <a class="btn btn-g btn-sm" href="#donate" data-i18n="proj.sup3">В титры ❤</a>
         </div>
       </article>
     </div>
-    <p class="small mut" style="margin-top:1rem">*Tavernkeep — оригинальная вселенная EnCore, вдохновлённая эстетикой тёмного фэнтези. Не является официальным продуктом по мотивам «Ведьмака» и не аффилирована с правообладателями.</p>
+    <p class="small mut" style="margin-top:1rem" data-i18n="proj.disclaimer">*Tavernkeep — оригинальная вселенная EnCore, вдохновлённая эстетикой тёмного фэнтези. Не является официальным продуктом по мотивам «Ведьмака» и не аффилирована с правообладателями.</p>
   </div>
 </section>
 
@@ -297,13 +304,13 @@ footer{border-top:1px solid var(--line);padding:1.6rem 0 2.4rem;color:var(--mut2
 <section id="why" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow"><i></i>Почему EnCore</span>
-      <h2 style="margin-top:.8rem">Корпоративные принципы, <span class="grad">инди-скорость</span></h2>
+      <span class="eyebrow" data-i18n="why.eyebrow" data-i18n-html><i></i>Почему EnCore</span>
+      <h2 style="margin-top:.8rem" data-i18n="why.h2" data-i18n-html>Корпоративные принципы, <span class="grad">инди-скорость</span></h2>
     </div>
     <div class="grid cols3">
-      <div class="card rv"><div class="icon">🔒</div><h3 style="margin-top:.7rem">Privacy-first</h3><p>Никакой аналитики, которая следит за вами. Метрики расширения живут только в вашем браузере (chrome.storage).</p></div>
-      <div class="card rv"><div class="icon">⚡</div><h3 style="margin-top:.7rem">Performance</h3><p>Early-exit тесты, EWMA-сглаживание пинга, PAC без лишних переключений. Этот сайт — один HTML-файл без трекеров.</p></div>
-      <div class="card rv"><div class="icon">🗺</div><h3 style="margin-top:.7rem">Open Roadmap</h3><p>Публичные статусы, честные «soon» и отчёты за донаты: каждый рубль видно в прогрессе проектов.</p></div>
+      <div class="card rv"><div class="icon">🔒</div><h3 style="margin-top:.7rem" data-i18n="why.c1h">Privacy-first</h3><p data-i18n="why.c1p">Никакой аналитики, которая следит за вами. Метрики расширения живут только в вашем браузере (chrome.storage).</p></div>
+      <div class="card rv"><div class="icon">⚡</div><h3 style="margin-top:.7rem" data-i18n="why.c2h">Performance</h3><p data-i18n="why.c2p">Early-exit тесты, EWMA-сглаживание пинга, PAC без лишних переключений. Этот сайт — один HTML-файл без трекеров.</p></div>
+      <div class="card rv"><div class="icon">🗺</div><h3 style="margin-top:.7rem" data-i18n="why.c3h">Open Roadmap</h3><p data-i18n="why.c3p">Публичные статусы, честные «soon» и отчёты за донаты: каждый рубль видно в прогрессе проектов.</p></div>
     </div>
   </div>
 </section>
@@ -312,14 +319,14 @@ footer{border-top:1px solid var(--line);padding:1.6rem 0 2.4rem;color:var(--mut2
 <section id="how" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow"><i></i>Как устроен флагман</span>
-      <h2 style="margin-top:.8rem">4 шага до быстрого сайта</h2>
+      <span class="eyebrow" data-i18n="how.eyebrow" data-i18n-html><i></i>Как устроен флагман</span>
+      <h2 style="margin-top:.8rem" data-i18n="how.h2">4 шага до быстрого сайта</h2>
     </div>
     <div class="steps rv">
-      <div class="step"><b>Сбор пула</b><p>Собираем сырые прокси из источников и чистим историю.</p></div>
-      <div class="step"><b>Тесты</b><p>Двухфазная проверка пинга и exit-IP, early-exit для скорости.</p></div>
-      <div class="step"><b>Рейтинг</b><p>EWMA + score: лучший прокси становится активным.</p></div>
-      <div class="step"><b>Защита</b><p>Failover с гистерезисом и PAC только для ваших сайтов.</p></div>
+      <div class="step"><b data-i18n="how.s1h">Сбор пула</b><p data-i18n="how.s1p">Собираем сырые прокси из источников и чистим историю.</p></div>
+      <div class="step"><b data-i18n="how.s2h">Тесты</b><p data-i18n="how.s2p">Двухфазная проверка пинга и exit-IP, early-exit для скорости.</p></div>
+      <div class="step"><b data-i18n="how.s3h">Рейтинг</b><p data-i18n="how.s3p">EWMA + score: лучший прокси становится активным.</p></div>
+      <div class="step"><b data-i18n="how.s4h">Защита</b><p data-i18n="how.s4p">Failover с гистерезисом и PAC только для ваших сайтов.</p></div>
     </div>
   </div>
 </section>
@@ -328,22 +335,22 @@ footer{border-top:1px solid var(--line);padding:1.6rem 0 2.4rem;color:var(--mut2
 <section id="donate" style="padding-top:0">
   <div class="wrap">
     <div class="panel rv">
-      <span class="eyebrow"><i></i>Поддержка студии</span>
-      <h2 style="margin:.8rem 0 .5rem">Ваш донат = <span class="grad">скорость релизов</span></h2>
-      <p class="mut" style="margin:0;max-width:38rem">Мы независимы: без инвесторов и рекламы. Деньги идут на серверы для тестов пула плагина, аккаунты разработчиков Shiftex и арт для Tavernkeep. Выберите удобный способ — все кнопки-заглушки легко заменить на ваши ссылки.</p>
+      <span class="eyebrow" data-i18n="don.eyebrow" data-i18n-html><i></i>Поддержка студии</span>
+      <h2 style="margin:.8rem 0 .5rem" data-i18n="don.h2" data-i18n-html>Ваш донат = <span class="grad">скорость релизов</span></h2>
+      <p class="mut" style="margin:0;max-width:38rem" data-i18n="don.sub">Мы независимы: без инвесторов и рекламы. Деньги идут на серверы для тестов пула плагина, аккаунты разработчиков Shiftex и арт для Tavernkeep. Выберите удобный способ — все кнопки-заглушки легко заменить на ваши ссылки.</p>
       <div class="d-grid">
         <!-- ★★★ ЗАМЕНИТЕ href="#" на ваши реальные ссылки ★★★ -->
-        <a class="d-card" id="dBoosty" href="#" target="_blank" rel="noopener"><span class="icon">☕</span><span><b>Boosty — подписка</b><span>Лучший вариант для RU: ежемесячная поддержка от 100 ₽</span></span><span class="go">→</span></a>
-        <a class="d-card" id="dPatreon" href="#" target="_blank" rel="noopener"><span class="icon">💜</span><span><b>Patreon / DonationAlerts</b><span>Для международной аудитории, цели и rewards</span></span><span class="go">→</span></a>
-        <a class="d-card" id="dCard" href="#" target="_blank" rel="noopener"><span class="icon">💳</span><span><b>Разовый донат с карты</b><span>CloudTips / DonatePay — без подписки, за 1 минуту</span></span><span class="go">→</span></a>
-        <a class="d-card" id="dGithub" href="#" target="_blank" rel="noopener"><span class="icon">⭐</span><span><b>GitHub Sponsors</b><span>Поддержка кода напрямую + бейдж спонсора</span></span><span class="go">→</span></a>
+        <a class="d-card" id="dBoosty" href="#" target="_blank" rel="noopener"><span class="icon">☕</span><span><b data-i18n="don.b1t">Boosty — подписка</b><span data-i18n="don.b1d">Лучший вариант для RU: ежемесячная поддержка от 100 ₽</span></span><span class="go">→</span></a>
+        <a class="d-card" id="dPatreon" href="#" target="_blank" rel="noopener"><span class="icon">💜</span><span><b data-i18n="don.b2t">Patreon / DonationAlerts</b><span data-i18n="don.b2d">Для международной аудитории, цели и rewards</span></span><span class="go">→</span></a>
+        <a class="d-card" id="dCard" href="#" target="_blank" rel="noopener"><span class="icon">💳</span><span><b data-i18n="don.b3t">Разовый донат с карты</b><span data-i18n="don.b3d">CloudTips / DonatePay — без подписки, за 1 минуту</span></span><span class="go">→</span></a>
+        <a class="d-card" id="dGithub" href="#" target="_blank" rel="noopener"><span class="icon">⭐</span><span><b data-i18n="don.b4t">GitHub Sponsors</b><span data-i18n="don.b4d">Поддержка кода напрямую + бейдж спонсора</span></span><span class="go">→</span></a>
       </div>
       <div class="crypto">
-        <b>🪙 Крипта — без комиссий платформ</b>
-        <div class="small mut">Нажмите «Копировать» — адрес подставится из конфига внизу страницы.</div>
+        <b data-i18n="don.cryh">🪙 Крипта — без комиссий платформ</b>
+        <div class="small mut" data-i18n="don.cryd">Нажмите «Копировать» — адрес подставится из конфига внизу страницы.</div>
         <div class="addr">
           <code id="cryptoAddr" class="mono">0x0000…замените-адрес-в-CONFIG…0000</code>
-          <button class="copy" id="copyBtn" type="button">Копировать</button>
+          <button class="copy" id="copyBtn" type="button" data-i18n="don.copy">Копировать</button>
         </div>
       </div>
       <p class="small mut" id="copyMsg" role="status" aria-live="polite" style="min-height:1.4em;margin:.6rem 0 0"></p>
@@ -355,14 +362,14 @@ footer{border-top:1px solid var(--line);padding:1.6rem 0 2.4rem;color:var(--mut2
 <section id="faq" style="padding-top:0">
   <div class="wrap" style="max-width:760px">
     <div class="sec-head rv">
-      <span class="eyebrow"><i></i>FAQ</span>
-      <h2 style="margin-top:.8rem">Частые вопросы</h2>
+      <span class="eyebrow" data-i18n="faq.eyebrow" data-i18n-html><i></i>FAQ</span>
+      <h2 style="margin-top:.8rem" data-i18n="faq.h2">Частые вопросы</h2>
     </div>
-    <details class="rv" open><summary>Куда пойдут донаты?</summary><p>Приоритет: серверы для проверки прокси-пула плагина → аккаунты Google Play / App Store для Shiftex → арт и звук для Tavernkeep. Отчёты публикуем в обновлениях проектов.</p></details>
-    <details class="rv"><summary>Плагин бесплатный? А Shiftex?</summary><p>Да. Auto Proxy Per Site бесплатен и работает локально. Shiftex выйдет с бесплатным тарифом для маленьких команд. Донат — добровольный способ ускорить новые фичи.</p></details>
-    <details class="rv"><summary>Что за игра Tavernkeep?</summary><p>Оригинальная игра в духе тёмного фэнтези: начинаете хозяином придорожной таверны, заканчиваете правителем города. Никакого готового IP — свой мир, свои монстры, свои истории.</p></details>
-    <details class="rv"><summary>Как заменить ссылки-заглушки?</summary><p>Откройте этот файл и в блоке CONFIG внизу впишите свои URL (Boosty, Patreon, карта, криптокошелёк). Всё подписано — займёт 2 минуты.</p></details>
-    <details class="rv"><summary>Можно предложить фичу или игру?</summary><p>Да, напишите на почту ниже. Лучшие идеи попадают в roadmap, а авторы — в титры.</p></details>
+    <details class="rv" open><summary data-i18n="faq.q1">Куда пойдут донаты?</summary><p data-i18n="faq.a1">Приоритет: серверы для проверки прокси-пула плагина → аккаунты Google Play / App Store для Shiftex → арт и звук для Tavernkeep. Отчёты публикуем в обновлениях проектов.</p></details>
+    <details class="rv"><summary data-i18n="faq.q2">Плагин бесплатный? А Shiftex?</summary><p data-i18n="faq.a2">Да. Auto Proxy Per Site бесплатен и работает локально. Shiftex выйдет с бесплатным тарифом для маленьких команд. Донат — добровольный способ ускорить новые фичи.</p></details>
+    <details class="rv"><summary data-i18n="faq.q3">Что за игра Tavernkeep?</summary><p data-i18n="faq.a3">Оригинальная игра в духе тёмного фэнтези: начинаете хозяином придорожной таверны, заканчиваете правителем города. Никакого готового IP — свой мир, свои монстры, свои истории.</p></details>
+    <details class="rv"><summary data-i18n="faq.q4">Как заменить ссылки-заглушки?</summary><p data-i18n="faq.a4">Откройте этот файл и в блоке CONFIG внизу впишите свои URL (Boosty, Patreon, карта, криптокошелёк). Всё подписано — займёт 2 минуты.</p></details>
+    <details class="rv"><summary data-i18n="faq.q5">Можно предложить фичу или игру?</summary><p data-i18n="faq.a5">Да, напишите на почту ниже. Лучшие идеи попадают в roadmap, а авторы — в титры.</p></details>
   </div>
 </section>
 
@@ -370,12 +377,12 @@ footer{border-top:1px solid var(--line);padding:1.6rem 0 2.4rem;color:var(--mut2
 <section id="contacts" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow"><i></i>Контакты</span>
-      <h2 style="margin-top:.8rem">На связи <span class="grad">без бюрократии</span></h2>
+      <span class="eyebrow" data-i18n="con.eyebrow" data-i18n-html><i></i>Контакты</span>
+      <h2 style="margin-top:.8rem" data-i18n="con.h2" data-i18n-html>На связи <span class="grad">без бюрократии</span></h2>
     </div>
     <div class="c-grid rv">
       <a class="mail" href="mailto:hello@example.com">✉️ hello@example.com <span class="cy">→</span></a>
-      <a class="mail" href="#" onclick="return false">💬 Telegram-канал · soon <span class="cy">→</span></a>
+      <a class="mail" href="#" onclick="return false"><span data-i18n="con.tg">💬 Telegram-канал · soon</span> <span class="cy">→</span></a>
     </div>
   </div>
 </section>
@@ -383,12 +390,12 @@ footer{border-top:1px solid var(--line);padding:1.6rem 0 2.4rem;color:var(--mut2
 
 <footer>
   <div class="wrap f-row">
-    <span>© <span id="year">2026</span> EnCore · Сделано с ❤ и нулевым трекингом</span>
-    <span class="mono small">plugin • shiftex • tavernkeep · <a href="bug.html" style="color:inherit">Report a bug</a></span>
+    <span data-i18n="foot.made" data-i18n-html>© <span id="year">2026</span> EnCore · Сделано с ❤ и нулевым трекингом</span>
+    <span class="mono small">plugin • shiftex • tavernkeep · <a href="bug.html" style="color:inherit" data-i18n="foot.bug">Report a bug</a></span>
   </div>
 </footer>
 
-<a class="fab" id="fab" href="#donate" aria-label="Поддержать">❤ Поддержать</a>
+<a class="fab" id="fab" href="#donate" aria-label="Поддержать" data-i18n="nav.donate" data-i18n-aria="nav.donate">❤ Поддержать</a>
 
 <script>
 /* ============================================================
@@ -442,12 +449,144 @@ secs.forEach(s => s && nio.observe(s));
 
 /* copy crypto */
 const msg = document.getElementById('copyMsg');
+const tCopyOk = () => (I18N[cur] && I18N[cur]['copy.ok']) || I18N.ru['copy.ok'];
 document.getElementById('copyBtn').addEventListener('click', async () => {
-  try { await navigator.clipboard.writeText(CONFIG.crypto); msg.textContent = '✅ Адрес скопирован. Спасибо за поддержку!'; }
+  try { await navigator.clipboard.writeText(CONFIG.crypto); msg.textContent = tCopyOk(); }
   catch { msg.textContent = 'Адрес: ' + CONFIG.crypto; }
   setTimeout(() => msg.textContent = '', 4000);
 });
 document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ===== I18N: RU/EN, auto-detect from browser, manual override saved ===== */
+const I18N = {
+ru: {
+'nav.skip':'Перейти к проектам','nav.main':'Основная навигация','nav.projects':'Проекты','nav.why':'Почему мы','nav.how':'Как устроено','nav.donate':'❤ Поддержать','nav.donateM':'❤ Поддержать проект','nav.menu':'Открыть меню',
+'hero.eyebrow':'<i></i>EnCore • работаем в открытую',
+'hero.h1':'EnCore: <span class="grad">плагин, Shiftex и таверна</span>',
+'hero.lead':'Три продукта студии: <b style="color:var(--txt)">Auto Proxy Per Site</b> — умное Chrome-расширение с автоподбором прокси, <b style="color:var(--txt)">Shiftex</b> — учёт смен для команд, и <b style="color:var(--txt)">Tavernkeep</b> — симулятор хозяина таверны с ростом до градостроительства.',
+'hero.cta1':'🚀 Смотреть проекты','hero.cta2':'❤ Поддержать донатом','hero.trustAria':'Преимущества',
+'hero.t1':'🧩 Плагин v1.0 в релизе','hero.t2':'📱 Shiftex в разработке','hero.t3':'🍺 Tavernkeep в концепте','hero.t4':'🔒 Privacy-first',
+'hero.statsAria':'Цифры студии','hero.s1':'проекта','hero.s2':'плагин в проде','hero.s3':'в разработке',
+'hero.termAria':'Демонстрация работы расширения','hero.termcap':'PAC per-site • auth • early-exit тесты • метрики пула. Всё локально, в вашем браузере.',
+'strip':'ENCORE&ensp;•&ensp;CHROME MV3&ensp;•&ensp;PAC PER-SITE&ensp;•&ensp;SHIFTEX&ensp;•&ensp;УЧЁТ СМЕН&ensp;•&ensp;TAVERNKEEP&ensp;•&ensp;TAVERN SIM&ensp;•&ensp;CITY-BUILDER&ensp;•&ensp;DARK FANTASY&ensp;•&ensp;ENCORE&ensp;•&ensp;CHROME MV3&ensp;•&ensp;PAC PER-SITE&ensp;•&ensp;SHIFTEX&ensp;•&ensp;УЧЁТ СМЕН&ensp;•&ensp;TAVERNKEEP&ensp;•&ensp;TAVERN SIM&ensp;•&ensp;CITY-BUILDER&ensp;•&ensp;DARK FANTASY&ensp;•&ensp;',
+'proj.eyebrow':'<i></i>Проекты EnCore','proj.h2':'Один релиз в проде, <span class="grad">два — в работе</span>','proj.sub':'Честно показываем статус каждого продукта: что готово, что в разработке и куда идут донаты.',
+'proj.flag':'Флагман','proj.p1d':'Наш браузерный плагин: автоподбор лучшего прокси под каждый сайт — сбор пула, двухфазные тесты с early-exit, EWMA-рейтинг, мгновенный failover, PAC per-site, авторизация и метрики. Всё считается локально.',
+'proj.p1f1':'Умный пул: rank + история + blacklist','proj.p1f2':'PAC-изоляция: прокси только там, где нужно','proj.p1f3':'Приватность: без внешних серверов',
+'proj.sup1':'Поддержать ❤','proj.ghsoon':'GitHub · soon',
+'proj.p2d':'Мобильное приложение для управления сменами и их учёта: расписание, табель, часы и ставки, замены и уведомления. Для малого бизнеса, кафе, складов и охраны — без сложных ERP.',
+'proj.p2f1':'Смены, табель и зарплата в одном месте','proj.p2f2':'Роли: админ, менеджер, сотрудник','proj.p2f3':'Offline-first и push о заменах','proj.sup2':'Ускорить релиз ❤',
+'proj.p3d':'Симулятор хозяина таверны в мире мрачного фэнтези: вари эль, принимай охотников на чудовищ, расширяй зал — и вырасти от одной корчмы до целого города с экономикой и управлением.',
+'proj.p3f1':'Таверна → квартал → город: градостроительство','proj.p3f2':'Экономика, репутация и случайные события','proj.p3f3':'Оригинальный мир в духе тёмного фэнтези*','proj.sup3':'В титры ❤',
+'proj.disclaimer':'*Tavernkeep — оригинальная вселенная EnCore, вдохновлённая эстетикой тёмного фэнтези. Не является официальным продуктом по мотивам «Ведьмака» и не аффилирована с правообладателями.',
+'why.eyebrow':'<i></i>Почему EnCore','why.h2':'Корпоративные принципы, <span class="grad">инди-скорость</span>',
+'why.c1h':'Privacy-first','why.c1p':'Никакой аналитики, которая следит за вами. Метрики расширения живут только в вашем браузере (chrome.storage).',
+'why.c2h':'Performance','why.c2p':'Early-exit тесты, EWMA-сглаживание пинга, PAC без лишних переключений. Этот сайт — один HTML-файл без трекеров.',
+'why.c3h':'Open Roadmap','why.c3p':'Публичные статусы, честные «soon» и отчёты за донаты: каждый рубль видно в прогрессе проектов.',
+'how.eyebrow':'<i></i>Как устроен флагман','how.h2':'4 шага до быстрого сайта',
+'how.s1h':'Сбор пула','how.s1p':'Собираем сырые прокси из источников и чистим историю.','how.s2h':'Тесты','how.s2p':'Двухфазная проверка пинга и exit-IP, early-exit для скорости.',
+'how.s3h':'Рейтинг','how.s3p':'EWMA + score: лучший прокси становится активным.','how.s4h':'Защита','how.s4p':'Failover с гистерезисом и PAC только для ваших сайтов.',
+'don.eyebrow':'<i></i>Поддержка студии','don.h2':'Ваш донат = <span class="grad">скорость релизов</span>',
+'don.sub':'Мы независимы: без инвесторов и рекламы. Деньги идут на серверы для тестов пула плагина, аккаунты разработчиков Shiftex и арт для Tavernkeep. Выберите удобный способ — все кнопки-заглушки легко заменить на ваши ссылки.',
+'don.b1t':'Boosty — подписка','don.b1d':'Лучший вариант для RU: ежемесячная поддержка от 100 ₽',
+'don.b2t':'Patreon / DonationAlerts','don.b2d':'Для международной аудитории, цели и rewards',
+'don.b3t':'Разовый донат с карты','don.b3d':'CloudTips / DonatePay — без подписки, за 1 минуту',
+'don.b4t':'GitHub Sponsors','don.b4d':'Поддержка кода напрямую + бейдж спонсора',
+'don.cryh':'🪙 Крипта — без комиссий платформ','don.cryd':'Нажмите «Копировать» — адрес подставится из конфига внизу страницы.','don.copy':'Копировать',
+'faq.eyebrow':'<i></i>FAQ','faq.h2':'Частые вопросы',
+'faq.q1':'Куда пойдут донаты?','faq.a1':'Приоритет: серверы для проверки прокси-пула плагина → аккаунты Google Play / App Store для Shiftex → арт и звук для Tavernkeep. Отчёты публикуем в обновлениях проектов.',
+'faq.q2':'Плагин бесплатный? А Shiftex?','faq.a2':'Да. Auto Proxy Per Site бесплатен и работает локально. Shiftex выйдет с бесплатным тарифом для маленьких команд. Донат — добровольный способ ускорить новые фичи.',
+'faq.q3':'Что за игра Tavernkeep?','faq.a3':'Оригинальная игра в духе тёмного фэнтези: начинаете хозяином придорожной таверны, заканчиваете правителем города. Никакого готового IP — свой мир, свои монстры, свои истории.',
+'faq.q4':'Как заменить ссылки-заглушки?','faq.a4':'Откройте этот файл и в блоке CONFIG внизу впишите свои URL (Boosty, Patreon, карта, криптокошелёк). Всё подписано — займёт 2 минуты.',
+'faq.q5':'Можно предложить фичу или игру?','faq.a5':'Да, напишите на почту ниже. Лучшие идеи попадают в roadmap, а авторы — в титры.',
+'con.eyebrow':'<i></i>Контакты','con.h2':'На связи <span class="grad">без бюрократии</span>','con.tg':'💬 Telegram-канал · soon',
+'foot.made':'© {Y} EnCore · Сделано с ❤ и нулевым трекингом','foot.bug':'Сообщить об ошибке',
+'copy.ok':'✅ Адрес скопирован. Спасибо за поддержку!',
+'meta.title':'EnCore — плагин для браузера, Shiftex и фэнтези-таверна',
+'meta.desc':'EnCore — инди-студия: браузерный плагин Auto Proxy Per Site, мобильное приложение Shiftex для учёта смен и игра — симулятор хозяина таверны с развитием в градостроительство. Поддержите разработку донатом.',
+'meta.ogt':'EnCore — tech-студия','meta.ogd':'Плагин Auto Proxy Per Site • Shiftex — учёт смен • Tavernkeep — от таверны до города. Поддержите нас.'
+},
+en: {
+'nav.skip':'Skip to projects','nav.main':'Main navigation','nav.projects':'Projects','nav.why':'Why us','nav.how':'How it works','nav.donate':'❤ Support','nav.donateM':'❤ Support the project','nav.menu':'Open menu',
+'hero.eyebrow':'<i></i>EnCore • building in the open',
+'hero.h1':'EnCore: <span class="grad">plugin, Shiftex & tavern</span>',
+'hero.lead':'Three studio products: <b style="color:var(--txt)">Auto Proxy Per Site</b> — a smart Chrome extension that auto-matches proxies, <b style="color:var(--txt)">Shiftex</b> — shift tracking for teams, and <b style="color:var(--txt)">Tavernkeep</b> — a tavern-keeper sim that grows into city building.',
+'hero.cta1':'🚀 View projects','hero.cta2':'❤ Support with a donation','hero.trustAria':'Highlights',
+'hero.t1':'🧩 Plugin v1.0 released','hero.t2':'📱 Shiftex in development','hero.t3':'🍺 Tavernkeep in concept','hero.t4':'🔒 Privacy-first',
+'hero.statsAria':'Studio numbers','hero.s1':'projects','hero.s2':'plugin in production','hero.s3':'in development',
+'hero.termAria':'Extension demo','hero.termcap':'PAC per-site • auth • early-exit tests • pool metrics. All local, in your browser.',
+'strip':'ENCORE&ensp;•&ensp;CHROME MV3&ensp;•&ensp;PAC PER-SITE&ensp;•&ensp;SHIFTEX&ensp;•&ensp;SHIFT TRACKING&ensp;•&ensp;TAVERNKEEP&ensp;•&ensp;TAVERN SIM&ensp;•&ensp;CITY-BUILDER&ensp;•&ensp;DARK FANTASY&ensp;•&ensp;ENCORE&ensp;•&ensp;CHROME MV3&ensp;•&ensp;PAC PER-SITE&ensp;•&ensp;SHIFTEX&ensp;•&ensp;SHIFT TRACKING&ensp;•&ensp;TAVERNKEEP&ensp;•&ensp;TAVERN SIM&ensp;•&ensp;CITY-BUILDER&ensp;•&ensp;DARK FANTASY&ensp;•&ensp;',
+'proj.eyebrow':'<i></i>EnCore projects','proj.h2':'One release in production, <span class="grad">two in the works</span>','proj.sub':'We honestly show each product’s status: what is done, what is in development, and where donations go.',
+'proj.flag':'Flagship','proj.p1d':'Our browser plugin: auto-matching the best proxy per site — pool harvesting, two-phase early-exit tests, EWMA rating, instant failover, per-site PAC, auth and metrics. Everything computed locally.',
+'proj.p1f1':'Smart pool: rank + history + blacklist','proj.p1f2':'PAC isolation: proxy only where needed','proj.p1f3':'Privacy: no external servers',
+'proj.sup1':'Support ❤','proj.ghsoon':'GitHub · soon',
+'proj.p2d':'A mobile app for managing and tracking shifts: schedule, timesheets, hours and rates, swaps and notifications. For small businesses, cafés, warehouses and security — no complex ERP.',
+'proj.p2f1':'Shifts, timesheets and payroll in one place','proj.p2f2':'Roles: admin, manager, employee','proj.p2f3':'Offline-first with swap push notifications','proj.sup2':'Speed up the release ❤',
+'proj.p3d':'A tavern-keeper sim in a grim fantasy world: brew ale, welcome monster hunters, expand the hall — and grow from a single roadside inn into a whole city with economy and management.',
+'proj.p3f1':'Tavern → district → city: city building','proj.p3f2':'Economy, reputation and random events','proj.p3f3':'Original world with a dark-fantasy spirit*','proj.sup3':'Get into the credits ❤',
+'proj.disclaimer':'*Tavernkeep is an original EnCore universe inspired by dark-fantasy aesthetics. It is not an official Witcher-based product and is not affiliated with the rights holders.',
+'why.eyebrow':'<i></i>Why EnCore','why.h2':'Corporate principles, <span class="grad">indie speed</span>',
+'why.c1h':'Privacy-first','why.c1p':'No analytics watching you. Extension metrics live only in your browser (chrome.storage).',
+'why.c2h':'Performance','why.c2p':'Early-exit tests, EWMA ping smoothing, PAC without needless switching. This site is a single HTML file with zero trackers.',
+'why.c3h':'Open Roadmap','why.c3p':'Public statuses, honest “soon”s and donation reports: every donation visible in project progress.',
+'how.eyebrow':'<i></i>How the flagship works','how.h2':'4 steps to a fast site',
+'how.s1h':'Pool harvesting','how.s1p':'We collect raw proxies from sources and clean history.','how.s2h':'Tests','how.s2p':'Two-phase ping and exit-IP checks, early-exit for speed.',
+'how.s3h':'Rating','how.s3p':'EWMA + score: the best proxy becomes active.','how.s4h':'Protection','how.s4p':'Failover with hysteresis and PAC only for your sites.',
+'don.eyebrow':'<i></i>Support the studio','don.h2':'Your donation = <span class="grad">release speed</span>',
+'don.sub':'We are independent: no investors, no ads. Money goes to pool-testing servers for the plugin, Shiftex developer accounts, and Tavernkeep art. Pick a convenient way — placeholder buttons are easy to swap for your links.',
+'don.b1t':'Boosty — subscription','don.b1d':'Best option for RU: monthly support from 100 ₽',
+'don.b2t':'Patreon / DonationAlerts','don.b2d':'For the international audience: goals and rewards',
+'don.b3t':'One-time card donation','don.b3d':'CloudTips / DonatePay — no subscription, 1 minute',
+'don.b4t':'GitHub Sponsors','don.b4d':'Support the code directly + sponsor badge',
+'don.cryh':'🪙 Crypto — no platform fees','don.cryd':'Hit “Copy” — the address comes from the config at the bottom of the page.','don.copy':'Copy',
+'faq.eyebrow':'<i></i>FAQ','faq.h2':'Frequently asked questions',
+'faq.q1':'Where do donations go?','faq.a1':'Priority: proxy-pool testing servers → Google Play / App Store accounts for Shiftex → art and sound for Tavernkeep. We publish reports in project updates.',
+'faq.q2':'Is the plugin free? What about Shiftex?','faq.a2':'Yes. Auto Proxy Per Site is free and works locally. Shiftex will launch with a free plan for small teams. Donations are a voluntary way to speed up new features.',
+'faq.q3':'What is the Tavernkeep game?','faq.a3':'An original dark-fantasy-spirited game: you start as a roadside tavern keeper and end up ruling a city. No ready-made IP — our own world, monsters and stories.',
+'faq.q4':'How do I swap the placeholder links?','faq.a4':'Open this file and in the CONFIG block at the bottom enter your URLs (Boosty, Patreon, card, crypto wallet). Everything is labeled — 2 minutes.',
+'faq.q5':'Can I suggest a feature or a game?','faq.a5':'Yes, email us below. The best ideas make it into the roadmap, and their authors into the credits.',
+'con.eyebrow':'<i></i>Contacts','con.h2':'In touch <span class="grad">without bureaucracy</span>','con.tg':'💬 Telegram channel · soon',
+'foot.made':'© {Y} EnCore · Made with ❤ and zero tracking','foot.bug':'Report a bug',
+'copy.ok':'✅ Address copied. Thank you for your support!',
+'meta.title':'EnCore — browser plugin, Shiftex & fantasy tavern',
+'meta.desc':'EnCore is an indie studio: the Auto Proxy Per Site browser plugin, the Shiftex shift-tracking mobile app, and a tavern-keeper sim growing into city building. Support development with a donation.',
+'meta.ogt':'EnCore — tech studio','meta.ogd':'Auto Proxy Per Site plugin • Shiftex shift tracking • Tavernkeep: from tavern to city. Support us.'
+}
+};
+let cur = 'ru';
+try {
+  const saved = localStorage.getItem('encore_lang');
+  if (saved === 'ru' || saved === 'en') cur = saved;
+  else {
+    const bl = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    cur = /^(ru|uk|be|kk)/.test(bl) ? 'ru' : 'en';
+  }
+} catch(_) { cur = 'ru'; }
+function setLang(l) {
+  if (l !== 'ru' && l !== 'en') return;
+  cur = l;
+  const D = I18N[l], F = I18N.ru, Y = new Date().getFullYear();
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    let t = (D && D[k] != null) ? D[k] : F[k];
+    if (t == null) return;
+    t = t.replace('{Y}', Y);
+    if (el.hasAttribute('data-i18n-html')) el.innerHTML = t; else el.textContent = t;
+  });
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    const k = el.getAttribute('data-i18n-aria');
+    const t = (D && D[k] != null) ? D[k] : F[k];
+    if (t != null) el.setAttribute('aria-label', t);
+  });
+  document.documentElement.setAttribute('lang', l);
+  if (D['meta.title']) document.title = D['meta.title'];
+  const md = document.querySelector('meta[name="description"]');
+  if (md && D['meta.desc']) md.setAttribute('content', D['meta.desc']);
+  document.querySelectorAll('[data-lang]').forEach(b => b.classList.toggle('on', b.getAttribute('data-lang') === l));
+  try { localStorage.setItem('encore_lang', l); } catch(_) {}
+}
+document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => setLang(b.getAttribute('data-lang'))));
+setLang(cur);
 </script>
 </body>
 </html>
+
