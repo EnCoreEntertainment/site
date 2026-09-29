@@ -108,8 +108,8 @@ input:focus,textarea:focus{outline:2px solid var(--cy);outline-offset:2px;border
     btn.disabled=true;hint.textContent="Sending…";
   // Primary delivery: owner's Google Apps Script web app (reliable, server-side throttle).
   // Endpoint + secret assembled at runtime (basic harvesting protection).
-  var GAS_EP=["https://script.google.com/macros/s/","AKfycbwJ5Xo3Pto2Z_aAuX37fxFQ3OgtwBU8T8SsQbtFWant_LDyZVz69DG6d9M-bu29Tl0o","/exec"].join("");
-  var GAS_SECRET=["AYFy","L7I93PNGTqKPhzevIuRk"].join("");
+  var GAS_EP=["https://script.google.com/macros/s/","AKfycbwKQ1tf0y96Y-DBHE3mvQG2nfpK-Wj3MmA3lxu4501tifZp0kf0YOWiqMRI-FairGzB","/exec"].join("");
+  var GAS_SECRET=["hiYvgqYLTvQFIBpJ","_fHZ_Ef9fIbQkPD5"].join("");
     var payload={secret:GAS_SECRET,name:n,email:e,message:d,page:location.href};
     var ctrl=new AbortController(),to=setTimeout(function(){ctrl.abort();},20000);
     fetch(GAS_EP,{
